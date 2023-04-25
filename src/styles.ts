@@ -6,6 +6,7 @@ import logo from './assets/images/efood-logo.svg'
 export const color = {
   salmon: '#E66767',
   salmonLighter: '#FFEBD9',
+  cardBg: '#F5F5F5'
 }
 
 export const fontSize = {
@@ -13,7 +14,8 @@ export const fontSize = {
   small: '12px',
   extraSmall: '10px',
   large: '32px',
-  extraLarge: '36px'
+  extraLarge: '36px',
+  rating: '18px'
 }
 
 export const Logo = styled.img`
@@ -29,6 +31,11 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sie: border-box;
         font-family: Roboto, sans-serif;
+        list-style: none;
+    }
+
+    body {
+      background-color: #FFF8F2;
     }
 
     .container {
