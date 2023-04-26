@@ -1,37 +1,51 @@
 /* styles */
 import * as S from './styles'
 /* assets */
-import cardImg from '../../assets/images/hioki-sushi-bg.svg'
 import star from '../../assets/images/star-rating.svg'
 
-const RestaurantCard = () => {
+type Props = {
+  id: number
+  name: string
+  rating: number
+  category: string
+  highlight?: boolean
+  description: string
+  img: string
+}
+
+const RestaurantCard = ({
+  id,
+  name,
+  rating,
+  category,
+  description,
+  img,
+  highlight
+}: Props) => {
 
   return (
-    <S.Card>
+    <S.Card id={id.toString()}>
       {/*
         img | destaque categoria
         nome | rating | img
         description
         btn
       */}
-      <img src={cardImg} alt="" />
+      <img src={img} alt="" />
       <S.TagContainer>
-        <S.Tag>Destaque da semana</S.Tag>
-        <S.Tag>Japonesa</S.Tag>
+        {highlight && <S.Tag>Highlight of the week</S.Tag>}
+        <S.Tag>{category}</S.Tag>
       </S.TagContainer>
       <S.CardAbout>
         <S.CardHeader>
-          <h3>Hioki Sushi</h3>
+          <h3>{name}</h3>
           <aside>
-            <p>4.9</p>
+            <p>{rating}</p>
             <img src={star} alt="" />
           </aside>
         </S.CardHeader>
         <S.CardDesc>
-          Peça já o melhor da culinária japonesa no conforta da sua casa!
-          Sushis frescos, sashimis deliciosos e pratos quentes irresistíveis.
-          Entrega rápida, embalagens cuidadosas e qualidade garantida.
-          Experimente o Japão sem sair do lar com nosso delivery!
+          {description}
         </S.CardDesc>
         <S.LinkBtn href='#'>Saiba mais</S.LinkBtn>
       </S.CardAbout>
