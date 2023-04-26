@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
         box-sie: border-box;
         font-family: Roboto, sans-serif;
         list-style: none;
+        text-decoration: none;
     }
 
     body {

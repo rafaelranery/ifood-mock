@@ -3,7 +3,9 @@ import RestaurantsList from "../../components/RestaurantsList"
 const Home = () => {
 
   return (
-    <RestaurantsList />
+    <div className="container">
+      <RestaurantsList />
+    </div>
   )
 }
 

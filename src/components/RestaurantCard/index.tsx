@@ -1,7 +1,12 @@
+/* npm */
+import {useDispatch} from 'react-redux'
+/* store */
+import { setCurrentRestaurant } from '../../store/reducers/Restaurants'
 /* styles */
 import * as S from './styles'
 /* assets */
 import star from '../../assets/images/star-rating.svg'
+import { Link } from 'react-router-dom'
 
 type Props = {
   id: number
@@ -22,6 +27,7 @@ const RestaurantCard = ({
   img,
   highlight
 }: Props) => {
+  const dispatch = useDispatch()
 
   return (
     <S.Card id={id.toString()}>
@@ -47,7 +53,9 @@ const RestaurantCard = ({
         <S.CardDesc>
           {description}
         </S.CardDesc>
-        <S.LinkBtn href='#'>Saiba mais</S.LinkBtn>
+        <Link to={'/profile'}>
+          <S.LinkBtn onClick={() => dispatch(setCurrentRestaurant({id: id}))}>Saiba mais</S.LinkBtn>
+        </Link>
       </S.CardAbout>
     </S.Card>
   )

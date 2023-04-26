@@ -18,3 +18,18 @@ export const TitleDisclaimer = styled.h2`
   margin: 0 auto;
   margin-top: 136px;
 `
+
+export const Navbar = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: ${fontSize.rating};
+  font-weight: bold;
+  a {
+    text-decoration: none;
+    color: ${color.salmon}
+  }
+  h1 {
+    margin: 0;
+  }
+`

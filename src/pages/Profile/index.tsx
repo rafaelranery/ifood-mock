@@ -1,7 +1,15 @@
+import Banner from "../../components/Banner"
+import Dishes from "../../components/Dishes"
+
 const Profile = () => {
 
   return (
-    <h1>Teste</h1>
+    <>
+      <Banner />
+      <div className="container">
+        <Dishes />
+      </div>
+    </>
   )
 }
 
