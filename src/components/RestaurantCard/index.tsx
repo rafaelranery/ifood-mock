@@ -1,7 +1,7 @@
 /* npm */
 import {useDispatch} from 'react-redux'
 /* store */
-import { setCurrentRestaurant } from '../../store/reducers/Restaurants'
+import { setCurrentRestaurant } from '../../../src/store/reducers/restaurants'
 /* styles */
 import * as S from './styles'
 /* assets */

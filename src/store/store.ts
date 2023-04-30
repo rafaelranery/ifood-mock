@@ -1,7 +1,7 @@
 /* npm */
 import {configureStore} from '@reduxjs/toolkit'
 /* reducers */
-import restaurantReducer from './reducers/Restaurants.ts'
+import restaurantReducer from '../../src/store/reducers/restaurants'
 
 export const store = configureStore({
   reducer: {

@@ -4,10 +4,10 @@ import RestaurantsFakeAPI from "../../utils/FakeRestaurants";
 /* img */
 
 type RestaurantState = {
-  item: Restaurant | undefined
+  item: Restaurant
 }
 const initialState: RestaurantState = {
-  item: undefined
+  item: new Restaurant(0,'', 0, '','','',undefined,[]) 
 }
 
 
@@ -20,7 +20,7 @@ export const RestaurantsSlice = createSlice({
       const selectedRestaurant = RestaurantsFakeAPI.find((i) => {
         return i.id === action.payload.id
       })
-      state.item = selectedRestaurant;
+      state.item = selectedRestaurant as Restaurant;
     }
   }
 })
