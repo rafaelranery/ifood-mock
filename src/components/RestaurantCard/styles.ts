@@ -6,7 +6,7 @@ width: 472px;
 height: 398px;
 position: relative;
 color: ${color.salmon};
-
+transition: 300ms;
 img {
   display: block;
 }

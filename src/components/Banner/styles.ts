@@ -12,7 +12,7 @@ export const Banner = styled.div<BannerProps>`
   color: #ffffff;
   padding-top: 24px;
   padding-bottom: 32px;
-  font-size: 32px;
+  font-size: 36px;
   max-width: 100vw;
   width: 100%;
   position: relative;
@@ -35,5 +35,6 @@ export const Banner = styled.div<BannerProps>`
   h4 {
     font-weight: 100;
     margin-bottom: 156px;
+    font-size: 32px;
   }
 `

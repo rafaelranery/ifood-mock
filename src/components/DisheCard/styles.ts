@@ -5,16 +5,30 @@ export const Card = styled.li`
   background-color: ${color.salmon};
   color: ${color.cardBg};
   padding: 8px;
+  transition 500ms;
+  img{
+    transition: 500ms;
+  }
+  &:hover {
+    border-radius: 8px;
+    transition 500ms;
+    img {
+      border-radius: 8px;
+      transition 500ms;
+    }
+  }
+
 `
 
 export const CardTitle = styled.h5`
   margin: 8px 0;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 900;
+  line-height: 19px;
 `
 
 export const CardDesc = styled.p`
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   font-size: ${fontSize.normal};
   line-height: 22px;
 `
@@ -28,4 +42,12 @@ export const CarBtn = styled.button`
   border: none;
   font-weight: bold;
   font-size: ${fontSize.normal};
+  margin-top: auto;
+  cursor: pointer;
+  transition 800ms;
+
+  &:hover {
+    border-radius: 8px;
+    transition 800ms;
+  }
 `

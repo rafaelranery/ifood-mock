@@ -15,7 +15,7 @@ export const RestaurantsSlice = createSlice({
   name: 'currentRestaurant',
   initialState,
   reducers: {
-    setCurrentRestaurant: (state, action: PayloadAction<Omit<Restaurant, 'name' | 'category' | 'img' | 'rating' | 'highlight' | 'description'>>) => {
+    setCurrentRestaurant: (state, action: PayloadAction<Omit<Restaurant, 'name' | 'category' | 'img' | 'rating' | 'highlight' | 'description' | 'dishes'>>) => {
       
       const selectedRestaurant = RestaurantsFakeAPI.find((i) => {
         return i.id === action.payload.id
