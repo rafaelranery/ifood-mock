@@ -30,6 +30,7 @@ export const Banner = styled.div<BannerProps>`
   .container {
     position: relative;
     z-index: 2;
+    padding-left: 12px;
   }
 
   h4 {

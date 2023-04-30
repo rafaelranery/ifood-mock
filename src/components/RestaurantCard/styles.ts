@@ -2,13 +2,16 @@ import styled from "styled-components";
 import { color, fontSize } from "../../styles";
 
 export const Card = styled.li`
-width: 472px;
-height: 398px;
+max-width: 100%;
+height: 100%;
 position: relative;
 color: ${color.salmon};
 transition: 300ms;
 img {
   display: block;
+  width: 100%;
+}
+@media (max-width: 1025px) {
 }
 `
 

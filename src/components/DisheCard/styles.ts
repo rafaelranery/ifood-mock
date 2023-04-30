@@ -8,6 +8,8 @@ export const Card = styled.li`
   transition 500ms;
   img{
     transition: 500ms;
+    width: 100%;
+    display: block;
   }
   &:hover {
     border-radius: 8px;
@@ -17,7 +19,6 @@ export const Card = styled.li`
       transition 500ms;
     }
   }
-
 `
 
 export const CardTitle = styled.h5`
@@ -31,6 +32,10 @@ export const CardDesc = styled.p`
   margin-bottom: 16px;
   font-size: ${fontSize.normal};
   line-height: 22px;
+
+  @media (max-width: 480px) {
+    font-size: ${fontSize.small};
+  }
 `
 
 export const CarBtn = styled.button`
@@ -42,7 +47,6 @@ export const CarBtn = styled.button`
   border: none;
   font-weight: bold;
   font-size: ${fontSize.normal};
-  margin-top: auto;
   cursor: pointer;
   transition 800ms;
 
