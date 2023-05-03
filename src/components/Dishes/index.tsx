@@ -9,9 +9,7 @@ const Dishes = () => {
 
   return (
     <S.DishesList>
-      {dishesArr?.map((dish) => {
-        return <DisheCard name={dish.name} description={dish.description} img={dish.img} key={dish.name} />
-      })}
+      {dishesArr?.map((dish) => <DisheCard name={dish.name} description={dish.description} img={dish.img} key={dish.name} />)}
     </S.DishesList>
   )
 }

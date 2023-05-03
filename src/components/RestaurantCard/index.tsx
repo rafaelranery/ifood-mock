@@ -31,13 +31,7 @@ const RestaurantCard = ({
 
   return (
     <S.Card id={id.toString()}>
-      {/*
-        img | destaque categoria
-        nome | rating | img
-        description
-        btn
-      */}
-      <img src={img} alt="" />
+      <img src={img} alt={`${name} Image`} />
       <S.TagContainer>
         {highlight && <S.Tag>Highlight of the week</S.Tag>}
         <S.Tag>{category}</S.Tag>
@@ -47,7 +41,7 @@ const RestaurantCard = ({
           <h3>{name}</h3>
           <aside>
             <p>{rating}</p>
-            <img src={star} alt="" />
+            <img src={star} alt="Rating" />
           </aside>
         </S.CardHeader>
         <S.CardDesc>

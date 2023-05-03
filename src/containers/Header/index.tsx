@@ -8,12 +8,10 @@ import { Logo } from '../../styles'
 const Header = () => {
   const { pathname } = useLocation();
 
-
   return (
     <S.Header>
-      {
-        pathname === '/'
-          ?
+      <div className="container">
+        {pathname === '/' ?
           <Logo as={'h1'} />
           :
           <S.Navbar>
@@ -21,15 +19,9 @@ const Header = () => {
             <Logo as={'h1'} />
             <p>0 Produtos no carrinho</p>
           </S.Navbar>
-      }
-      {/* <Logo as={'h1'} /> */}
-      {
-        pathname === '/'
-        &&
-        <S.TitleDisclaimer>
-          Viva experiências gastronômicas no conforto da sua casa
-        </S.TitleDisclaimer>
-      }
+        }
+        {pathname === '/' && <S.TitleDisclaimer>Viva experiências gastronômicas no conforto da sua casa</S.TitleDisclaimer>}
+      </div>
     </S.Header>
   )
 }

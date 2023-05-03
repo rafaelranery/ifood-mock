@@ -6,11 +6,8 @@ import instlogo from '../../assets/images/instagram-logo.svg'
 import ttlogo from '../../assets/images/twitter-logo.svg'
 
 
-const Footer = () => {
-
-
-  return (
-    <S.Footer>
+const Footer = () => (
+  <S.Footer>
       <div className="container">
         <img src={logo} />
         <S.Links>
@@ -33,8 +30,6 @@ const Footer = () => {
         <p>A efood é uma plataforma para divulgação de estabelecimentos, a responsabilidade pela entrega e pela qualidade do produto é toda do estabelecimento contratado</p>
       </div>
     </S.Footer>
-
-  )
-}
+)
 
 export default Footer

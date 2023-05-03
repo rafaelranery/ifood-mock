@@ -26,7 +26,7 @@ export const TitleDisclaimer = styled.h2`
 export const Navbar = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   font-size: ${fontSize.rating};
   font-weight: bold;
 
