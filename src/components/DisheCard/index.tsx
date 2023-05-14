@@ -1,3 +1,4 @@
+import { CarBtn } from '../../styles'
 import * as S from './styles'
 /* img temp */
 
@@ -12,7 +13,7 @@ const DisheCard = ({name, description, img}: Props) => (
       <img src={img} alt="" />
       <S.CardTitle>{name}</S.CardTitle>
       <S.CardDesc>{description}</S.CardDesc>
-      <S.CarBtn>Add to cart</S.CarBtn>
+      <CarBtn>Add to cart</CarBtn>
     </S.Card>
 )
 export default DisheCard

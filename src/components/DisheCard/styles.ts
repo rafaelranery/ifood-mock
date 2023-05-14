@@ -38,20 +38,3 @@ export const CardDesc = styled.p`
   }
 `
 
-export const CarBtn = styled.button`
-  background-color: ${color.cardBg};
-  color: ${color.salmon};
-  display: block;
-  width: 100%;
-  padding: 4px 0;
-  border: none;
-  font-weight: bold;
-  font-size: ${fontSize.normal};
-  cursor: pointer;
-  transition 800ms;
-
-  &:hover {
-    border-radius: 8px;
-    transition 800ms;
-  }
-`

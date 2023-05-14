@@ -1,4 +1,5 @@
 import Banner from "../../components/Banner"
+import Cart from "../../components/Cart"
 import Dishes from "../../components/Dishes"
 
 const Profile = () => (
@@ -7,6 +8,7 @@ const Profile = () => (
     <div className="container">
       <Dishes />
     </div>
+    <Cart />
   </>
 )
 

@@ -6,7 +6,8 @@ import logo from './assets/images/efood-logo.svg'
 export const color = {
   salmon: '#E66767',
   salmonLighter: '#FFEBD9',
-  cardBg: '#F5F5F5'
+  cardBg: '#F5F5F5',
+  black: '#000'
 }
 
 export const fontSize = {
@@ -23,6 +24,24 @@ export const Logo = styled.img`
   width: 125px;
   height: 58px;
   background-image: url(${logo});
+`
+
+export const CarBtn = styled.button`
+  background-color: ${color.cardBg};
+  color: ${color.salmon};
+  display: block;
+  width: 100%;
+  padding: 4px 0;
+  border: none;
+  font-weight: bold;
+  font-size: ${fontSize.normal};
+  cursor: pointer;
+  transition 800ms;
+
+  &:hover {
+    border-radius: 8px;
+    transition 800ms;
+  }
 `
 
 const GlobalStyle = createGlobalStyle`
