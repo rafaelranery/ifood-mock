@@ -4,10 +4,10 @@ import RestaurantsFakeAPI from "../../utils/FakeRestaurants";
 /* img */
 
 type RestaurantState = {
-  item: Restaurant
+  item: Restaurant | null
 }
 const initialState: RestaurantState = {
-  item: new Restaurant(0,'', 0, '','','',undefined,[]) 
+  item: null
 }
 
 

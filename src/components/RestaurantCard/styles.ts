@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { color, fontSize } from "../../styles";
+import { Link } from "react-router-dom";
 
 export const Card = styled.li`
 max-width: 100%;
@@ -45,7 +46,7 @@ export const CardDesc = styled.p`
     margin-bottom: 16px;
 `
 
-export const LinkBtn = styled.a`
+export const LinkBtn = styled(Link)`
   padding: 4px 6px;
   background-color: ${color.salmon};
   font-size: ${fontSize.normal};

@@ -10,6 +10,7 @@ export const Card = styled.li`
     transition: 500ms;
     width: 100%;
     display: block;
+    cursor: pointer;
   }
   &:hover {
     border-radius: 8px;

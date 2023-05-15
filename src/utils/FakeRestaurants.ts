@@ -69,21 +69,25 @@ const RestaurantsFakeAPI: RestaurantsArray = [
         name: 'Sashimi Platter',
         description: 'Assorted fresh raw fish served with soy sauce, wasabi, and pickled ginger.',
         img: sashImg,
+        price: 29.90
       },
       {
         name: 'Chicken Teriyaki',
         description: 'Grilled chicken with a sweet and savory teriyaki sauce, served with rice and vegetables.',
         img: teryakiImg,
+        price: 29.90
       },
       {
         name: 'Miso Soup',
         description: 'Savory soup made with miso paste, seaweed, and tofu.',
         img: misoImg,
+        price: 29.90
       },
       {
         name: 'Matcha Ice Cream',
         description: 'Creamy ice cream flavored with powdered green tea, a popular Japanese dessert.',
         img: matchaImg,
+        price: 10.99
       },
     ]
   },
@@ -98,7 +102,8 @@ const RestaurantsFakeAPI: RestaurantsArray = [
       {
         name: 'Margherita Pizza',
         description: 'Classic pizza topped with tomato sauce, mozzarella cheese, and fresh basil leaves.',
-        img: dulceMarguerita
+        img: dulceMarguerita,
+        price: 79.99
       }
     ]
   },
@@ -114,31 +119,37 @@ const RestaurantsFakeAPI: RestaurantsArray = [
         name: 'Margherita Pizza',
         description: 'Classic pizza topped with tomato sauce, mozzarella cheese, and fresh basil leaves.',
         img: margheritaImg,
+        price: 79.99
       },
       {
         name: 'Spaghetti Carbonara',
         description: 'Pasta dish with eggs, bacon, cheese, and black pepper.',
         img: carbonaraImg,
+        price: 39.99
       },
       {
         name: 'Fettuccine Alfredo',
         description: 'Creamy pasta dish made with butter, cream, and Parmesan cheese.',
         img: fettImg,
+        price: 39.99
       },
       {
         name: 'Tiramisu',
         description: 'Italian dessert with layers of espresso-dipped ladyfingers and mascarpone cheese.',
         img: tiramisuImg,
+        price: 19.99
       },
       {
         name: 'Osso Buco',
         description: 'Italian dish made with braised veal shanks, vegetables, and broth.',
         img: ossoImg,
+        price: 79.99
       },
       {
         name: 'Bruschetta',
         description: 'Toasted bread topped with fresh tomatoes, garlic, basil, and olive oil.',
         img: bruschettaImg,
+        price: 29.99
       },
     ]
   },
@@ -154,31 +165,37 @@ const RestaurantsFakeAPI: RestaurantsArray = [
         name: 'California Roll',
         description: 'Sushi roll filled with crab meat, avocado, and cucumber, wrapped in seaweed and rice.',
         img: californiaImg,
+        price: 19.99
       },
       {
         name: 'Sashimi Platter',
         description: 'Assorted fresh raw fish served with soy sauce, wasabi, and pickled ginger.',
         img: sashImg,
+        price: 49.99
       },
       {
         name: 'Chicken Teriyaki',
         description: 'Grilled chicken with a sweet and savory teriyaki sauce, served with rice and vegetables.',
         img: teryakiImg,
+        price: 29.99
       },
       {
         name: 'Tempura Udon',
         description: 'Thick udon noodles in a hot dashi broth with crispy tempura shrimp and vegetables.',
         img: tempuraImg,
+        price: 29.99
       },
       {
         name: 'Miso Soup',
         description: 'Savory soup made with miso paste, seaweed, and tofu.',
         img: misoImg,
+        price: 9.99
       },
       {
         name: 'Matcha Ice Cream',
         description: 'Creamy ice cream flavored with powdered green tea, a popular Japanese dessert.',
         img: matchaImg,
+        price: 9.99
       },
     ]
   },
@@ -194,31 +211,37 @@ const RestaurantsFakeAPI: RestaurantsArray = [
         name: 'Chicken Tikka Masala',
         description: 'Grilled chicken in a creamy tomato sauce with spices.',
         img: tikkaImg,
+        price: 79.99
       },
       {
         name: 'Naan Bread',
         description: 'Soft, fluffy Indian bread baked in a clay oven, served with curry dishes.',
         img: naanImg,
+        price: 5.99
       },
       {
         name: 'Samosas',
         description: 'Fried or baked pastry filled with spiced potatoes, vegetables, or meat.',
         img: samosasImg,
+        price: 9.99
       },
       {
         name: 'Butter Chicken',
         description: 'Marinated chicken cooked in a rich, buttery tomato-based sauce.',
         img: butterImg,
+        price: 79.99
       },
       {
         name: 'Lamb Vindaloo',
         description: 'Spicy curry dish with tender lamb, potatoes, and vinegar.',
         img: vindalooImg,
+        price: 39.99
       },
       {
         name: 'Mango Lassi',
         description: 'Sweet and creamy yogurt-based drink flavored with fresh mango.',
         img: mangoImg,
+        price: 12.99
       },
     ]
   },
@@ -234,31 +257,37 @@ const RestaurantsFakeAPI: RestaurantsArray = [
         name: 'Guacamole',
         description: 'Classic Mexican dip made with mashed avocado, onion, tomato, lime juice, and salt.',
         img: guacamoleImg,
+        price: 19.99
       },
       {
         name: 'Tacos Al Pastor',
         description: 'Marinated pork cooked on a vertical spit, served in a soft tortilla with pineapple and cilantro.',
         img: tacosImg,
+        price: 29.99
       },
       {
         name: 'Enchiladas',
         description: 'Rolled tortillas filled with meat or cheese, covered with sauce and cheese, and baked.',
         img: enchiladasImg,
+        price: 39.99
       },
       {
         name: 'Queso Fundido',
         description: 'Melted cheese dish mixed with chorizo, served with tortillas or chips.',
         img: quesoImg,
+        price: 69.99
       },
       {
         name: 'Churros',
         description: 'Deep-fried dough pastry sprinkled with cinnamon sugar, served with chocolate dipping sauce.',
         img: churrosImg,
+        price: 9.99
       },
       {
         name: 'Margarita',
         description: 'Classic cocktail made with tequila, lime juice, and orange liqueur, served with salt on the rim.',
         img: margaritaImg,
+        price: 9.99
       },
     ]
   },
@@ -274,31 +303,37 @@ const RestaurantsFakeAPI: RestaurantsArray = [
         name: 'Coq Au Vin',
         description: 'Chicken cooked in red wine with bacon, mushrooms, onions, and garlic.',
         img: coqImg,
+        price: 79.99
       },
       {
         name: 'Escargots',
         description: 'Snails cooked with garlic butter and herbs, served in their shells.',
         img: escargotImg,
+        price: 29.99
       },
       {
         name: 'Ratatouille',
         description: 'Stewed vegetables dish with eggplant, zucchini, peppers, and tomatoes.',
         img: rattImg,
+        price: 49.99
       },
       {
         name: 'Crème Brûlée',
         description: 'Rich custard dessert topped with a layer of caramelized sugar.',
         img: cremeImg,
+        price: 9.99
       },
       {
         name: 'Baguette',
         description: 'Classic French bread with a crispy crust and a soft, chewy interior.',
         img: baguetteImg,
+        price: 5.99
       },
       {
         name: 'Beef Bourguignon',
         description: 'Beef stew cooked in red wine with carrots, onions, and mushrooms.',
         img: beefImg,
+        price: 79.99
       },
     ]
   },
@@ -314,21 +349,25 @@ const RestaurantsFakeAPI: RestaurantsArray = [
         name: 'Pad Thai',
         description: 'Thai stir-fried noodles with veggies, peanuts, tofu, and a sweet and sour sauce.',
         img: padThaiImg,
+        price: 29.99
       },
       {
         name: 'Tom Yum Soup',
         description: 'Spicy and sour soup made with lemongrass, lime, chili, and shrimp or chicken.',
         img: tomYumImg,
+        price: 29.99
       },
       {
         name: 'Green Curry',
         description: 'Creamy coconut-based curry with green chili, veggies, and meat or seafood.',
         img: curreyGImg,
+        price: 59.99
       },
       {
         name: 'Papaya Salad',
         description: 'Shredded green papaya, tomatoes, chili, and peanuts in a sweet and spicy dressing.',
         img: papyaImg,
+        price: 9.99
       }
     ]
   }

@@ -9,7 +9,7 @@ const Dishes = () => {
 
   return (
     <S.DishesList>
-      {dishesArr?.map((dish) => <DisheCard name={dish.name} description={dish.description} img={dish.img} key={dish.name} />)}
+      {dishesArr?.map((dish) => <DisheCard dish={dish} key={dish.name} />)}
     </S.DishesList>
   )
 }

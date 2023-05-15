@@ -44,6 +44,19 @@ export const CarBtn = styled.button`
   }
 `
 
+export const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: ${color.black};
+  opacity: 0.8;
+  z-index: 1;
+`
+
 const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;

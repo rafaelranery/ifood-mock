@@ -38,6 +38,9 @@ export const Navbar = styled.nav`
     margin: 0;
     margin-left: 60px;
   }
+  p {
+    cursor: pointer;
+  }
 
   @media (max-width: 480px) {
     flex-direction: column;
