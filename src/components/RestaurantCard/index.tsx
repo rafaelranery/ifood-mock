@@ -46,7 +46,7 @@ const RestaurantCard = ({
         <S.CardDesc>
           {descricao}
         </S.CardDesc>
-          <S.LinkBtn to={'/profile'} onClick={() => dispatch(setCurrentRestaurant({id: id}))}>Saiba mais</S.LinkBtn>
+          <S.LinkBtn to={'/profile'} onClick={() => dispatch(setCurrentRestaurant(id))}>Saiba mais</S.LinkBtn>
       </S.CardAbout>
     </S.Card>
   )

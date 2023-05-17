@@ -7,7 +7,7 @@ import * as S from './styles'
 import { RootReducer } from '../../store/store'
 import { close, remove } from '../../store/reducers/cart'
 
-import Dish from '../../models/Dishes'
+import {Item} from '../../models/Restaurant'
 
 import { formatPriceBRL } from '../../utils/functions/formatPriceBRL'
 
@@ -19,13 +19,13 @@ const Cart = () => {
     dispatch(close())
   }
 
-  const removeFromCart = (item: Dish) => {
+  const removeFromCart = (item: Item) => {
     dispatch(remove(item))
   }
 
-  const totalValue = (itens: Dish[ ]) => {
+  const totalValue = (itens: Item[]) => {
     return itens.reduce((accumutalor, currentValue) => {
-      return accumutalor += currentValue.price
+      return accumutalor += currentValue.preco
     }, 0)
   }
 
@@ -36,11 +36,11 @@ const Cart = () => {
         <ul>
           <li>
             {itens.map((item) => (
-              <S.CartItem key={item.name}>
-                <img src={item.img} />
+              <S.CartItem key={item.id}>
+                <img src={item.foto} />
                 <div>
-                  <h4>{item.name}</h4>
-                  <span>{formatPriceBRL(item.price)}</span>
+                  <h4>{item.nome}</h4>
+                  <span>{formatPriceBRL(item.preco)}</span>
                 </div>
                 <button onClick={() => removeFromCart(item)} type='button' />
               </S.CartItem>

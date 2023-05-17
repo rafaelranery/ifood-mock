@@ -5,10 +5,10 @@ import RestaurantsFakeAPI from "../../utils/FakeRestaurants";
 
 type RestaurantState = {
   allRestaurants: Restaurant[]
-  item: Restaurant | null
+  item: Restaurant | undefined
 }
 const initialState: RestaurantState = {
-  item: null,
+  item: undefined,
   allRestaurants: []
 }
 
@@ -17,11 +17,11 @@ export const RestaurantsSlice = createSlice({
   name: 'currentRestaurant',
   initialState,
   reducers: {
-    setCurrentRestaurant: (state, action: PayloadAction<Omit<Restaurant, 'name' | 'category' | 'img' | 'rating' | 'highlight' | 'description' | 'dishes'>>) => {
-      const selectedRestaurant = RestaurantsFakeAPI.find((i) => {
-        return i.id === action.payload.id
+    setCurrentRestaurant: (state, action: PayloadAction<number>) => {
+      const selectedRestaurant = state.allRestaurants.find((i) => {
+        return i.id === action.payload
       })
-      state.item = selectedRestaurant as Restaurant;
+      state.item = selectedRestaurant;
     },
     setRestaurants: (state, action: PayloadAction<Restaurant[]>) => {
       state.allRestaurants = action.payload

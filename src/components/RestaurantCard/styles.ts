@@ -11,6 +11,8 @@ transition: 300ms;
 img {
   display: block;
   width: 100%;
+  max-height: 216px;
+  object-fit: cover;
 }
 @media (max-width: 1025px) {
 }

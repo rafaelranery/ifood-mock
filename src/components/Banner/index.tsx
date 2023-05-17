@@ -6,13 +6,13 @@ import * as S from './styles'
 
 const Banner = () => {
 
-  const { item } = useSelector((state: RootReducer) => state.currentRestaurant)
+  const { item } = useSelector((state: RootReducer) => state.restaurants)
 
   return (
-    <S.Banner img={item?.img}>
+    <S.Banner img={item?.capa}>
       <div className="container">
-        <h4>{item?.category}</h4>
-        <h3>{item?.name}</h3>
+        <h4>{item?.tipo}</h4>
+        <h3>{item?.titulo}</h3>
       </div>
     </S.Banner>
   )

@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import Dish from "../../models/Dishes";
+import {Item} from "../../models/Restaurant";
 
 type CartState = {
-  itens: Dish[]
+  itens: Item[]
   isOpen: boolean
 }
 
@@ -22,11 +22,11 @@ const cartSlice = createSlice({
     close: (state) => {
       state.isOpen = false
     },
-    add: (state, action: PayloadAction<Dish>) => {
+    add: (state, action: PayloadAction<Item>) => {
       state.itens.push(action.payload)
     },
-    remove: (state, action: PayloadAction<Dish>) => {
-      state.itens = state.itens.filter((item) => item.name != action.payload.name)
+    remove: (state, action: PayloadAction<Item>) => {
+      state.itens = state.itens.filter((item) => item.nome != action.payload.nome)
     },
   }
 })

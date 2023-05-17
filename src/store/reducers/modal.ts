@@ -1,9 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import Dish from '../../models/Dishes';
+import { Item } from '../../models/Restaurant';
 
 type ModalState = {
   isOpen: boolean,
-  item: Dish | null
+  item: Item | null
 }
 
 const initialState: ModalState = {
@@ -15,7 +15,7 @@ const modalSlice = createSlice({
   name: 'modal',
   initialState,
   reducers: {
-    open: (state, action: PayloadAction<Dish>) => {
+    open: (state, action: PayloadAction<Item>) => {
       state.item = action.payload
       state.isOpen = true;
     },

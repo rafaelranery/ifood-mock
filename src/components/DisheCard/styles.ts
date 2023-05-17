@@ -9,6 +9,9 @@ export const Card = styled.li`
   img{
     transition: 500ms;
     width: 100%;
+    max-height: 167px;
+    height: 100%;
+    object-fit: cover;
     display: block;
     cursor: pointer;
   }
@@ -27,12 +30,15 @@ export const CardTitle = styled.h5`
   font-size: 16px;
   font-weight: 900;
   line-height: 19px;
+  cursor: pointer;
 `
 
 export const CardDesc = styled.p`
   margin-bottom: 16px;
   font-size: ${fontSize.normal};
   line-height: 22px;
+  cursor: pointer;
+
 
   @media (max-width: 480px) {
     font-size: ${fontSize.small};
