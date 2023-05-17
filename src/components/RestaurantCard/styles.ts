@@ -8,6 +8,7 @@ height: 100%;
 position: relative;
 color: ${color.salmon};
 transition: 300ms;
+
 img {
   display: block;
   width: 100%;

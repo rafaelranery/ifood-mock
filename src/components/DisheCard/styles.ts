@@ -6,6 +6,10 @@ export const Card = styled.li`
   color: ${color.cardBg};
   padding: 8px;
   transition 500ms;
+  
+  display: flex;
+  flex-direction: column;
+
   img{
     transition: 500ms;
     width: 100%;

@@ -29,14 +29,16 @@ export const Logo = styled.img`
 export const CarBtn = styled.button`
   background-color: ${color.cardBg};
   color: ${color.salmon};
-  display: block;
+  display: flex;
   width: 100%;
   padding: 4px 0;
   border: none;
+  justify-content: center;
   font-weight: bold;
   font-size: ${fontSize.normal};
   cursor: pointer;
   transition 800ms;
+  margin-top: auto;
 
   &:hover {
     border-radius: 8px;
