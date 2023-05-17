@@ -65,6 +65,32 @@ export const Modal = styled.div`
     padding: 6px 8px;
     margin-top: 16px;
   }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    margin: 96px;
+
+    img {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  @media (max-width: 426px) {
+    flex-direction: column;
+    margin: 0;
+
+    img {
+      width: 100%;
+      max-height: 220px;
+      margin-bottom: 16px;
+    }
+
+    div {
+      p:nth-child(3) {
+        margin-top: 12px;
+      }
+    }
+  }
 `
 
 export const CloseBtn = styled.button`

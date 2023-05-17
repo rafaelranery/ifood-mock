@@ -16,6 +16,15 @@ img {
   object-fit: cover;
 }
 @media (max-width: 1025px) {
+  img {
+    max-height: 160px;
+    height: 100%;
+  }
+@media (max-width: 426px) {
+  img {
+    max-height: 220px;
+    height: 100%;
+  }
 }
 `
 
