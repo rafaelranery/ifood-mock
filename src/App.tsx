@@ -10,8 +10,10 @@ import Header from './containers/Header'
 /* Styles */
 import GlobalStyle from './styles'
 import Footer from './containers/Footer'
+import { generateId } from './utils/functions/generateId'
 
 function App() {
+  generateId()
 
   return (
     <BrowserRouter>
