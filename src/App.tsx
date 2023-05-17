@@ -7,13 +7,11 @@ import Routes from './routes'
 import { store } from './store/store'
 /* JSX Elements */
 import Header from './containers/Header'
+import Footer from './containers/Footer'
 /* Styles */
 import GlobalStyle from './styles'
-import Footer from './containers/Footer'
-import { generateId } from './utils/functions/generateId'
 
 function App() {
-  generateId()
 
   return (
     <BrowserRouter>

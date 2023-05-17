@@ -10,6 +10,7 @@ import { close, remove } from '../../store/reducers/cart'
 import {Item} from '../../models/Restaurant'
 
 import { formatPriceBRL } from '../../utils/functions/formatPriceBRL'
+import { totalValue } from '../../utils/functions/totalValue'
 
 const Cart = () => {
   const { isOpen, itens } = useSelector((state: RootReducer) => state.cart)
@@ -21,12 +22,6 @@ const Cart = () => {
 
   const removeFromCart = (item: Item) => {
     dispatch(remove(item))
-  }
-
-  const totalValue = (itens: Item[]) => {
-    return itens.reduce((accumutalor, currentValue) => {
-      return accumutalor += currentValue.preco
-    }, 0)
   }
 
   return (
