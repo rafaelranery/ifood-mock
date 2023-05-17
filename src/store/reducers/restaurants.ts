@@ -1,7 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Restaurant } from "../../models/Restaurant";
-import RestaurantsFakeAPI from "../../utils/FakeRestaurants";
-/* img */
 
 type RestaurantState = {
   allRestaurants: Restaurant[]
