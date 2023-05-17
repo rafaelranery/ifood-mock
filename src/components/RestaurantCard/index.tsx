@@ -9,42 +9,42 @@ import star from '../../assets/images/star-rating.svg'
 
 type Props = {
   id: number
-  name: string
-  rating: number
-  category: string
-  highlight?: boolean
-  description: string
-  img: string
+  titulo: string
+  avaliacao: number
+  tipo: string
+  destacado?: boolean
+  descricao: string
+  capa: string
 }
 
 const RestaurantCard = ({
   id,
-  name,
-  rating,
-  category,
-  description,
-  img,
-  highlight
+  titulo,
+  avaliacao,
+  tipo,
+  descricao,
+  capa,
+  destacado
 }: Props) => {
   const dispatch = useDispatch()
 
   return (
     <S.Card id={id.toString()}>
-      <img src={img} alt={`${name} Image`} />
+      <img src={capa} alt={`${titulo} Image`} />
       <S.TagContainer>
-        {highlight && <S.Tag>Highlight of the week</S.Tag>}
-        <S.Tag>{category}</S.Tag>
+        {destacado && <S.Tag>Highlight of the week</S.Tag>}
+        <S.Tag>{tipo}</S.Tag>
       </S.TagContainer>
       <S.CardAbout>
         <S.CardHeader>
-          <h3>{name}</h3>
+          <h3>{titulo}</h3>
           <aside>
-            <p>{rating}</p>
+            <p>{avaliacao}</p>
             <img src={star} alt="Rating" />
           </aside>
         </S.CardHeader>
         <S.CardDesc>
-          {description}
+          {descricao}
         </S.CardDesc>
           <S.LinkBtn to={'/profile'} onClick={() => dispatch(setCurrentRestaurant({id: id}))}>Saiba mais</S.LinkBtn>
       </S.CardAbout>
