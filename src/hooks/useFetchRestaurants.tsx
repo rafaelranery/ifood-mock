@@ -11,7 +11,7 @@ export const useFetchRestaurants = () => {
     .then(res => res.json())
     .then(data => dispatch(setRestaurants(data)))
   }
-
+  
   useEffect(() => {
     fetchRestaurants()
   }, [])
