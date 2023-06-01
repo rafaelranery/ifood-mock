@@ -4,6 +4,7 @@ import { useFetchRestaurants } from '../../hooks/useFetchRestaurants'
 import RestaurantCard from '../RestaurantCard'
 import * as S from './styles'
 import { useGetRestaurantsQuery } from '../../services/api'
+import Loader from '../Loader'
 
 const RestaurantsList = () => {
   useFetchRestaurants()
@@ -18,7 +19,7 @@ const RestaurantsList = () => {
       </S.List>
     )
   }
-
+  return <Loader />
 }
 
 export default RestaurantsList
