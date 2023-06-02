@@ -2,10 +2,14 @@ import { FadeLoader } from "react-spinners"
 import * as S from './styles'
 import { color } from "../../styles"
 
-const Loader = () => {
+type Props = {
+  color: string
+}
+
+const Loader = ({color}: Props) => {
   return (
     <S.Container>
-      <FadeLoader color={color.salmon} />
+      <FadeLoader color={color} />
     </S.Container>
   )
 }

@@ -5,6 +5,7 @@ import RestaurantCard from '../RestaurantCard'
 import * as S from './styles'
 import { useGetRestaurantsQuery } from '../../services/api'
 import Loader from '../Loader'
+import { color } from '../../styles'
 
 const RestaurantsList = () => {
   useFetchRestaurants()
@@ -19,7 +20,7 @@ const RestaurantsList = () => {
       </S.List>
     )
   }
-  return <Loader />
+  return <Loader color={color.salmon} />
 }
 
 export default RestaurantsList
