@@ -25,7 +25,7 @@ const Checkout = () => {
         price: item.preco
       })
     })
-    return products
+    return products as [{id: number, price: number}]
   }
 
 
