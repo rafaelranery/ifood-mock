@@ -27,6 +27,17 @@ const Cart = () => {
     dispatch(remove(item))
   }
 
+  if (!checkout.isActive && itens.length === 0) {
+    return (
+      <S.CartContainer className={isOpen ? 'is-open' : ''}>
+      <Overlay onClick={closeCart} />
+      <S.Sidebar>
+        <p>O carrinho está vazio! <br />Adicione um item para continuar a compra.</p>
+      </S.Sidebar>
+    </S.CartContainer>
+    )
+  }
+
   return (
     <S.CartContainer className={isOpen ? 'is-open' : ''}>
       <Overlay onClick={closeCart} />

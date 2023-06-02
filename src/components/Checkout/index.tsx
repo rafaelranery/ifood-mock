@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import InputMask from 'react-input-mask'
 import { CarBtn, color } from '../../styles'
 import * as S from './styles'
-import { displayCheckout, endCheckout, goToPayment, payloadBuilder, returnFromPayment } from '../../store/reducers/cart'
+import { displayCheckout, endCheckout, goToPayment, payloadBuilder, returnFromPayment, close as closeCart } from '../../store/reducers/cart'
 import { totalValue } from '../../utils/functions/totalValue'
 import { formatPriceBRL } from '../../utils/functions/formatPriceBRL'
 import { RootReducer } from '../../store/store'
@@ -91,6 +91,11 @@ const Checkout = () => {
       return true
     }
     return false
+  }
+
+  const endPurchase = () => {
+    dispatch(displayCheckout(false))
+    dispatch(closeCart())
   }
 
 
@@ -190,7 +195,7 @@ const Checkout = () => {
         <p>Gostaríamos de ressaltar que nossos entregadores não estão autorizados a realizar cobranças extras.</p>
         <p>Lembre-se da importnância de higienizar as mãos após o recebimento do pedido, garantindo assim sua segurança e bem-estar durante a refeição.</p>
         <p>Esperamos que desfrute de uma deliciosa e agradável experiência gastronômica. Bom apetite!</p>
-        <CarBtn onClick={() => dispatch(displayCheckout(false))}>Concluir</CarBtn>
+        <CarBtn onClick={endPurchase}>Concluir</CarBtn>
       </S.CheckoutContainer>
     )
   }
