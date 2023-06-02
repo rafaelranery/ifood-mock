@@ -1,6 +1,5 @@
 import { FadeLoader } from "react-spinners"
 import * as S from './styles'
-import { color } from "../../styles"
 
 type Props = {
   color: string

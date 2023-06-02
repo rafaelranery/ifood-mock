@@ -38,6 +38,14 @@ export const Sidebar = styled.aside`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  .empty-state {
+    text-align: center;
+    color: ${color.salmonLighter};
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
 `
 
 export const CartItem = styled.div`

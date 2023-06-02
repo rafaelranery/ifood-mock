@@ -1,17 +1,21 @@
-/* util */
-import { useFetchRestaurants } from '../../hooks/useFetchRestaurants'
-/* styles */
 import RestaurantCard from '../RestaurantCard'
-import * as S from './styles'
-import { useGetRestaurantsQuery } from '../../services/api'
 import Loader from '../Loader'
+import { useGetRestaurantsQuery } from '../../services/api'
 import { color } from '../../styles'
+import * as S from './styles'
+import { useDispatch } from 'react-redux'
+import { setRestaurants } from '../../store/reducers/restaurants'
+import { useEffect } from 'react'
 
 const RestaurantsList = () => {
-  useFetchRestaurants()
+  const dispatch = useDispatch()
   const { data: restaurants } = useGetRestaurantsQuery()
-
-  // const { allRestaurants: restaurants } = useSelector((state: RootReducer) => state.restaurants)
+  
+  useEffect(() => {
+    if(restaurants) {
+      dispatch(setRestaurants(restaurants))
+    }
+  }, [restaurants, dispatch])
 
   if (restaurants) {
     return (

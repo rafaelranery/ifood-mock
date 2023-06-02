@@ -1,18 +1,12 @@
-/* styles */
 import { useSelector, useDispatch } from 'react-redux'
-import { useState } from 'react'
-
-import { CarBtn, Overlay } from '../../styles'
-import * as S from './styles'
-
+import Checkout from '../Checkout'
+import { Item } from '../../models/Restaurant'
 import { RootReducer } from '../../store/store'
 import { close, displayCheckout, remove } from '../../store/reducers/cart'
-
-import { Item } from '../../models/Restaurant'
-
 import { formatPriceBRL } from '../../utils/functions/formatPriceBRL'
 import { totalValue } from '../../utils/functions/totalValue'
-import Checkout from '../Checkout'
+import { CarBtn, Overlay } from '../../styles'
+import * as S from './styles'
 
 const Cart = () => {
   const { isOpen, itens, checkout } = useSelector((state: RootReducer) => state.cart)
@@ -32,7 +26,7 @@ const Cart = () => {
       <S.CartContainer className={isOpen ? 'is-open' : ''}>
       <Overlay onClick={closeCart} />
       <S.Sidebar>
-        <p>O carrinho está vazio! <br />Adicione um item para continuar a compra.</p>
+        <p className='empty-state'>O carrinho está vazio! <br />Adicione um item para continuar a compra.</p>
       </S.Sidebar>
     </S.CartContainer>
     )

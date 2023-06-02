@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import InputMask from 'react-input-mask'
-import { CarBtn, color } from '../../styles'
-import * as S from './styles'
-import { displayCheckout, endCheckout, goToPayment, payloadBuilder, returnFromPayment, close as closeCart } from '../../store/reducers/cart'
+import Loader from '../Loader'
+import { RootReducer } from '../../store/store'
+import { displayCheckout, endCheckout, goToPayment, returnFromPayment, close as closeCart } from '../../store/reducers/cart'
+import { usePurchaseMutation } from '../../services/api'
 import { totalValue } from '../../utils/functions/totalValue'
 import { formatPriceBRL } from '../../utils/functions/formatPriceBRL'
-import { RootReducer } from '../../store/store'
-import { usePurchaseMutation } from '../../services/api'
-import Loader from '../Loader'
+import { CarBtn, color } from '../../styles'
+import * as S from './styles'
 
 const Checkout = () => {
   const dispatch = useDispatch()
@@ -191,7 +190,7 @@ const Checkout = () => {
     return (
       <S.CheckoutContainer>
         <h3>Pedido Realizado - {data.orderId} </h3>
-        <p>Estamos felizes em informar que seu pedido já está em processo de preparação e, em breve, será entregue no enderço fonrecido.</p>
+        <p>Estamos felizes em informar que seu pedido já está em processo de preparação e, em breve, será entregue no endereço fornecido.</p>
         <p>Gostaríamos de ressaltar que nossos entregadores não estão autorizados a realizar cobranças extras.</p>
         <p>Lembre-se da importnância de higienizar as mãos após o recebimento do pedido, garantindo assim sua segurança e bem-estar durante a refeição.</p>
         <p>Esperamos que desfrute de uma deliciosa e agradável experiência gastronômica. Bom apetite!</p>
