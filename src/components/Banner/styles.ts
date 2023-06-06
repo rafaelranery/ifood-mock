@@ -32,8 +32,8 @@ export const Banner = styled.div<BannerProps>`
     z-index: 2;
     padding-left: 12px;
   }
-
   h4 {
+    text-transform: capitalize;
     font-weight: 100;
     margin-bottom: 156px;
     font-size: 32px;

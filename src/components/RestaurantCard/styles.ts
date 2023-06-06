@@ -37,7 +37,6 @@ export const CardAbout = styled.div`
 export const CardHeader = styled.header`
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
 
     aside {
       font-weight: bold;
@@ -78,4 +77,5 @@ export const Tag = styled(LinkBtn.withComponent('p'))`
   margin-left: 8px;
   margin-top: 0px;
   display: inline-block;
+  text-transform: capitalize;
 `
