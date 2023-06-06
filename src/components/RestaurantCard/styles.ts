@@ -3,6 +3,8 @@ import { color, fontSize } from "../../styles";
 import { Link } from "react-router-dom";
 
 export const Card = styled.li`
+display: flex;
+flex-direction: column;
 max-width: 100%;
 height: 100%;
 position: relative;
@@ -33,6 +35,10 @@ export const CardAbout = styled.div`
   border-top: none;
   padding: 8px;
   background-color: ${color.cardBg};
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
 `
 export const CardHeader = styled.header`
   display: flex;
@@ -64,6 +70,8 @@ export const LinkBtn = styled(Link)`
   font-weight: bold;
   color: ${color.salmonLighter};
   text-decoration: none;
+
+  max-width: fit-content;
 ` 
 
 export const TagContainer = styled.div`
@@ -78,4 +86,10 @@ export const Tag = styled(LinkBtn.withComponent('p'))`
   margin-top: 0px;
   display: inline-block;
   text-transform: capitalize;
+`
+
+export const BtnContainer = styled.div`
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
 `

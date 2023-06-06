@@ -1,5 +1,5 @@
 /* npm */
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 /* store */
 import { setCurrentRestaurant } from '../../../src/store/reducers/restaurants'
 /* styles */
@@ -43,10 +43,15 @@ const RestaurantCard = ({
             <img src={star} alt="Rating" />
           </aside>
         </S.CardHeader>
-        <S.CardDesc>
-          {descricao}
-        </S.CardDesc>
-          <S.LinkBtn to={'/profile'} onClick={() => dispatch(setCurrentRestaurant(id))}>Saiba mais</S.LinkBtn>
+        <S.CardDesc>{descricao}</S.CardDesc>
+        <S.BtnContainer>
+          <S.LinkBtn
+            to={'/profile'}
+            onClick={() => dispatch(setCurrentRestaurant(id))}
+          >
+            Saiba mais
+          </S.LinkBtn>
+        </S.BtnContainer>
       </S.CardAbout>
     </S.Card>
   )
