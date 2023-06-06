@@ -8,7 +8,8 @@ export const DishesList = styled.ul`
   padding-bottom: 120px;
   margin: 0 auto;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
     padding: 56px 16px 120px;
   }
   @media (max-width: 480px) {

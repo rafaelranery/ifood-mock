@@ -8,13 +8,7 @@ export const List = styled.ul`
   row-gap: 48px;
   margin: 32px auto 128px;
 
-
-  @media (max-width: 1025px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 8px;
-    padding: 0 16px;
-  }
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     grid-template-columns: 1fr;
   }
 `
